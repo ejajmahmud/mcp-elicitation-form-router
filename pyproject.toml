@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-elicitation-form-router"
+version = "0.1.0"
+description = "Server-initiated MCP Elicitation JSON Schema form builder, field type/enum/range validator, default merger, and pending timeout state machine"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+mcp-elicitation-form-router = "mcp_elicitation_form_router.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_elicitation_form_router*"]
